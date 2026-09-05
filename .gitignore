@@ -1,5 +1,7 @@
 git commands.txt
 .ipynb_checkpoints
+Tesis
+Datasets
 
 # M1
 M1/.ipynb_checkpoints
@@ -9,3 +11,15 @@ M1/Codigo/.ipynb_checkpoints
 M1/Codigo/calibration images
 M1/Codigo/calibration parameters
 M1/Codigo/test
+
+# M2
+M2/.ipynb_checkpoints
+M2/Documento
+M2/Codigo/.ipynb_checkpoints
+M2/Codigo/classical visual odometry pipeline.ipynb
+M2/Codigo/classical visual odometry pipeline 1.ipynb
+M2/Codigo/classical visual odometry pipeline 2.ipynb
+M2/Codigo/classical visual odometry pipeline 3.ipynb
+M2/Codigo/recover pose.ipynb
+M2/Codigo/VO - New Tsukuba Stereo Dataset.pkl
+M2/Codigo/VO - KITTI Dataset.pkl
