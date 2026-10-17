@@ -1,0 +1,21 @@
+Comandos docker:
+    docker compose up -d
+    docker compose build
+    docker compose logs
+    docker compose up --build -d
+    docker compose down
+    docker compose build --no-cache
+
+Comandos listar dispositivos de video:
+    ls -l /dev/video*
+    lsusb
+    v4l2-ctl --list-devices
+        Se requiere instalar lo siguiente:
+            sudo apt update && sudo apt install v4l-utils
+
+Comandos en contenedor para abrir jupyter notebook:
+    - Ubicarnos en la carpeta "/usr/src/app" para abrir Jupyter Notebook
+    - Ejecutar el siguiente comando:
+        jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    - Hacer click en "Open in Browser"
+        http://127.0.0.1:8888/tree

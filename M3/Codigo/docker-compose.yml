@@ -1,0 +1,26 @@
+services:
+  yolo_service: 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chuy777/yolo:v1.0
+    container_name: yolo
+    # privileged: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=/tmp/.docker.xauth
+    volumes:
+      - ./scripts:/usr/src/app/scripts
+      - ${XAUTHORITY}:/tmp/.docker.xauth:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      # - /dev:/dev
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/video2:/dev/video2
+      - /dev/video4:/dev/video4
+    group_add:
+      - video # Otorga permisos al contenedor para leer hardware de video sin ser root
+    ipc: host # Optimiza la memoria compartida (evita lag en streaming de video de OpenCV)
+    network_mode: host # Crucial para conectar con tu servidor gráfico sin trabas
+    command: ["tail", "-f", "/dev/null"]
+
